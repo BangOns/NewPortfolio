@@ -1,0 +1,153 @@
+$myFont: "MyFont";
+
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+
+.Container {
+  &-Teknologi {
+    width: 100%;
+    padding-top: 10%;
+  }
+}
+.Judul-Teknologi {
+  h1 {
+    font-family: $myFont;
+    font-weight: 500;
+    font-size: 40px;
+  }
+  padding-bottom: 5%;
+}
+
+.Container-List-Teknologi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Teknologi-Container {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.Teknologi {
+  width: 210px;
+  height: 120px;
+  margin-bottom: 20px;
+  .Image-Teknologi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .iconTech {
+      position: absolute;
+      top: -45px;
+      animation-name: animateIcon;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.Teknologi:nth-child(5) {
+  .iconTech {
+    top: -55px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .Container-List-Teknologi {
+    padding-top: 10%;
+  }
+  .Teknologi-Container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .Judul-Teknologi {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .Teknologi-Container {
+    width: 100%;
+  }
+  .Teknologi {
+    width: 190px;
+    height: 100px;
+    padding-bottom: 30px;
+    .Image-Teknologi {
+      .alas-iconTech {
+        width: 140px;
+        height: 85px;
+      }
+      .iconTech {
+        top: -20px;
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+  .Teknologi:nth-child(5) {
+    .iconTech {
+      top: -30px;
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .Judul-Teknologi {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
+  .Teknologi {
+    width: 130px;
+    height: 70px;
+    .Image-Teknologi {
+      width: 100%;
+
+      .alas-iconTech {
+        width: 110px;
+        height: 75px;
+      }
+      .iconTech {
+        top: -17px;
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+  .Teknologi:nth-child(5) {
+    .iconTech {
+      top: -25px;
+    }
+  }
+}
+
+@keyframes animateIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("../Font/RobotoCondensed-Regular.ttf") format("truetype");
+}

@@ -1,0 +1,359 @@
+$myFont: "MyFont";
+
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+.Container-Aside {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.Judul-Aside {
+  width: 100%;
+  h1 {
+    font-family: $myFont;
+    font-size: 40px;
+  }
+  padding-bottom: 3%;
+}
+.Form-Aside {
+  width: 100%;
+  padding-bottom: 5%;
+}
+.Text-Aside {
+  width: 100%;
+  text-align: center;
+  p {
+    font-family: $myFont;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 50px;
+  }
+  strong {
+    font-family: $myFont;
+    font-size: 25px;
+  }
+}
+.Form {
+  padding-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputName {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  input {
+    width: 525px;
+    height: 40px;
+    font-size: 25px;
+    font-family: $myFont;
+    outline: none;
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 5px 0 5px 5px;
+  }
+}
+.inputMessage {
+  padding-top: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  textarea {
+    width: 523px;
+    height: 234px;
+    outline: none;
+    background-color: #d9d9d9;
+    font-size: 25px;
+    font-family: $myFont;
+    padding: 5px 0 0 5px;
+    border: none;
+    border-radius: 10px;
+  }
+}
+.buttonSubmit {
+  width: 523px;
+  display: flex;
+  padding-top: 2%;
+  button {
+    width: 121px;
+    height: 44px;
+    border-radius: 30px;
+    background-color: map-get($MyWarna, "warna-dasar4");
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: $myFont;
+    color: map-get($MyWarna, "warna-dasar");
+    letter-spacing: 0.04em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.Socmed-Aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Judul-Socmed {
+  width: 523px;
+  padding-bottom: 2%;
+  h1 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: $myFont;
+  }
+  strong {
+    font-family: $myFont;
+  }
+}
+.List-MySocmed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Container-List-MySocmed {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.MySocmed {
+  width: 60px;
+  height: 60px;
+  .Image-MySocmed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .Container-List-MySocmed {
+    width: 27%;
+  }
+}
+@media screen and (max-width: 990px) {
+  .Container-List-MySocmed {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 790px) {
+  .Container-List-MySocmed {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .Judul-Socmed {
+    width: 460px;
+  }
+  .Container-List-MySocmed {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .Text-Aside {
+    p {
+      font-family: $myFont;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 50px;
+    }
+    strong {
+      font-family: $myFont;
+      font-size: 20px;
+    }
+  }
+  .inputName {
+    input {
+      width: 450px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+  .inputMessage {
+    textarea {
+      width: 450px;
+      height: 204px;
+      font-size: 20px;
+    }
+  }
+  .buttonSubmit {
+    width: 450px;
+    button {
+      width: 101px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+  .Judul-Socmed {
+    width: 430px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Container-List-MySocmed {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Judul-Aside {
+    h1 {
+      font-size: 30px;
+    }
+    padding-bottom: 8%;
+  }
+  .inputName {
+    input {
+      width: 400px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+  .inputMessage {
+    textarea {
+      width: 400px;
+      height: 164px;
+      font-size: 18px;
+    }
+  }
+  .buttonSubmit {
+    width: 400px;
+    button {
+      width: 90px;
+      height: 30px;
+      font-size: 18px;
+    }
+  }
+
+  .Judul-Socmed {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Text-Aside {
+    p {
+      font-size: 18px;
+      line-height: 40px;
+    }
+    strong {
+      font-size: 18px;
+    }
+  }
+  .inputName {
+    input {
+      width: 300px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  .inputMessage {
+    textarea {
+      width: 300px;
+      height: 164px;
+      font-size: 18px;
+    }
+  }
+  .buttonSubmit {
+    width: 300px;
+    button {
+      width: 90px;
+      height: 30px;
+      font-size: 15px;
+    }
+  }
+  .Judul-Socmed {
+    width: 270px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .Container-List-MySocmed {
+    width: 73%;
+  }
+  .MySocmed {
+    .Image-MySocmed {
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  .Container-List-MySocmed {
+    width: 83%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .Judul-Aside {
+    h1 {
+      font-size: 25px;
+    }
+    padding-bottom: 8%;
+  }
+  .Text-Aside {
+    p {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    strong {
+      font-size: 15px;
+    }
+  }
+  .inputName {
+    input {
+      width: 250px;
+      height: 35px;
+      font-size: 18px;
+    }
+  }
+  .inputMessage {
+    textarea {
+      width: 250px;
+      height: 164px;
+      font-size: 18px;
+    }
+  }
+  .buttonSubmit {
+    width: 250px;
+    button {
+      width: 90px;
+      height: 30px;
+      font-size: 15px;
+    }
+  }
+  .Judul-Socmed {
+    width: 220px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .Container-List-MySocmed {
+    width: 90%;
+  }
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("../Font/RobotoCondensed-Regular.ttf") format("truetype");
+}

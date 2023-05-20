@@ -1,0 +1,138 @@
+$myFont: "MyFont";
+
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+
+.Container {
+  &-Projects {
+    width: 100%;
+    padding-top: 10%;
+  }
+}
+.Judul-Projects {
+  h1 {
+    font-family: $myFont;
+    font-weight: 500;
+    font-size: 40px;
+  }
+  padding-bottom: 5%;
+}
+.Container-List-Project {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Project {
+  width: 360px;
+  height: 290px;
+  margin-bottom: 6%;
+  &-Link {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+  }
+  &-Image {
+    width: 90%;
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 160px;
+      background-color: #263a29;
+    }
+  }
+  &-Text {
+    padding-top: 10px;
+    .Project-Text1 {
+      font-family: $myFont;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+    .Project-Text2 {
+      font-family: $myFont;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .Judul-Projects {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .Container-List-Project {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Judul-Projects {
+    padding-bottom: 15%;
+  }
+  .Project {
+    width: 390px;
+    height: 340px;
+    margin-bottom: 6%;
+    &-Link {
+      width: 100%;
+      display: flex;
+      column-gap: 10px;
+      a {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+    &-Image {
+      width: 90%;
+      img {
+        border-radius: 10px;
+        width: 100%;
+        height: 180px;
+        background-color: #263a29;
+        object-fit: cover;
+      }
+    }
+    &-Text {
+      padding-top: 10px;
+      .Project-Text1 {
+        font-family: $myFont;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+      .Project-Text2 {
+        font-family: $myFont;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .Project {
+    width: 390px;
+    height: 340px;
+    margin-bottom: 6%;
+    padding-left: 20px;
+  }
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("../Font/RobotoCondensed-Regular.ttf") format("truetype");
+}

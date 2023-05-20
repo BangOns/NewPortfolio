@@ -1,0 +1,285 @@
+$myFont: "MyFont";
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+
+.Container-Footer {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  background-color: map-get($MyWarna, "warna-dasar4");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.Container-Footer1 {
+  width: 80%;
+}
+
+.Container-navbar-Footer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 0;
+  padding-top: 20px;
+
+  .judul-Footer {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 30px;
+      font-family: $myFont;
+      font-weight: 500;
+      color: map-get($MyWarna, "warna-dasar3");
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .categories-Footer {
+    width: 30%;
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      li {
+        a {
+          font-size: 20px;
+          color: map-get($MyWarna, "warna-dasar3");
+          text-decoration: none;
+          p {
+            font-family: $myFont;
+          }
+        }
+      }
+    }
+  }
+}
+.social-media-Footer {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.Container-copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: map-get($MyWarna, "warna-dasar4");
+}
+.copyright {
+  p {
+    color: map-get($MyWarna, "warna-dasar");
+    font-family: $myFont;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .Container-Footer1 {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 910px) {
+  .Container-navbar-Footer {
+    justify-content: space-around;
+    .judul-Footer {
+      width: 280px;
+      order: 1;
+      h1 {
+        font-size: 25px;
+        font-weight: 500;
+      }
+    }
+    .categories-Footer {
+      width: 280px;
+      order: 3;
+    }
+    .social-media-Footer {
+      width: 280px;
+      order: 2;
+    }
+  }
+}
+@media screen and (max-width: 610px) {
+  .Container-navbar-Footer {
+    .judul-Footer {
+      width: 200px;
+    }
+    .categories-Footer {
+      width: 300px;
+      ul {
+        li {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .social-media-Footer {
+      width: 200px;
+      ul {
+        li {
+          a {
+            figure {
+              img {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 490px) {
+  .Container-navbar-Footer {
+    .judul-Footer {
+      width: 150px;
+    }
+    .categories-Footer {
+      width: 280px;
+      ul {
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .social-media-Footer {
+      width: 150px;
+      ul {
+        li {
+          a {
+            figure {
+              img {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    p {
+      font-size: 13px;
+      color: map-get($MyWarna, "warna-dasar");
+      font-family: $myFont;
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .Container-navbar-Footer {
+    justify-content: space-around;
+
+    .judul-Footer {
+      width: 120px;
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .categories-Footer {
+      width: 260px;
+      ul {
+        li {
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .social-media-Footer {
+      width: 120px;
+      ul {
+        li {
+          a {
+            figure {
+              img {
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 285px) {
+  .Container-navbar-Footer {
+    justify-content: space-around;
+
+    .judul-Footer {
+      width: 100px;
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .categories-Footer {
+      width: 260px;
+      ul {
+        li {
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .social-media-Footer {
+      width: 120px;
+      ul {
+        li {
+          a {
+            figure {
+              img {
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("../Font/RobotoCondensed-Regular.ttf") format("truetype");
+}

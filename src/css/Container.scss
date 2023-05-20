@@ -1,0 +1,37 @@
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+body {
+  background-color: map-get($MyWarna2, "warna-dasar");
+}
+.Footer {
+  width: 100%;
+}
+.Container {
+  &-Page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &-Kotak {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .Container {
+    &-Kotak {
+      width: 95%;
+    }
+  }
+}
