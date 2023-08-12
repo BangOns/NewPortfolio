@@ -124,6 +124,11 @@ $MyWarna2: (
     }
   }
 }
+@media screen and (min-width: 1820px) {
+  .Container-List-Project {
+    justify-content: space-around;
+  }
+}
 @media screen and (max-width: 390px) {
   .Project {
     width: 390px;

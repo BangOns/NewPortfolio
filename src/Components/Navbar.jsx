@@ -21,18 +21,18 @@ function Navbar() {
   return (
     <header className="Container-navbar">
       <div className="judul" onClick={() => window.scrollTo(0, 0)}>
-        <h1>Portofolio.me</h1>
+        <h1>Syahroni</h1>
       </div>
       <nav className="categories">
         <ul className="categories-container">
           <li>
-            <a href="#teknologi" onClick={GetPage}>
-              <p>Technologies</p>
+            <a href="#project" onClick={GetPage}>
+              <p>Projects</p>
             </a>
           </li>
           <li>
-            <a href="#project" onClick={GetPage}>
-              <p>Projects</p>
+            <a href="#teknologi" onClick={GetPage}>
+              <p>Skills</p>
             </a>
           </li>
           <li>

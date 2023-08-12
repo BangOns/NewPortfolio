@@ -8,7 +8,7 @@ function OtherTech() {
   return (
     <section className="Container-Other">
       <header className="judul-Other">
-        <h1>Other</h1>
+        <h1>Familiar</h1>
       </header>
       <article className="Container-List-Other">
         <ul className="Other-Container">

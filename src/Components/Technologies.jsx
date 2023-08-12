@@ -7,7 +7,7 @@ function Technologies() {
   return (
     <section className="Container-Teknologi" id="teknologi">
       <header className="Judul-Teknologi">
-        <h1>Technologies</h1>
+        <h1>Skills</h1>
       </header>
       <article className="Container-List-Teknologi">
         <ul className="Teknologi-Container">
