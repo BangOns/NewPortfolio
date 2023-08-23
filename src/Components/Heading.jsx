@@ -3,7 +3,7 @@ import "../css/Heading.scss";
 import ImageMyFace from "../img/profil1.png";
 import ImageMyFace2 from "../img/profil2.png";
 import ImageMyFace3 from "../img/profil3.png";
-import MyCv from "../assets/Cv_Syahroni.pdf";
+import MyCv from "../assets/Cv_Syahroni_English.pdf";
 function Heading() {
   return (
     <section className="Container-Heading">
