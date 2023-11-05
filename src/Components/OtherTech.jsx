@@ -1,14 +1,12 @@
 import React from "react";
 import Alas from "../img/alas.png";
-import ReactQ from "../img/react-query.png";
 import "../css/OtherTech.scss";
 import { dataOther } from "./getData";
-function OtherTech() {
-  const dataTechOther = dataOther;
+function OtherTech({ darkModes }) {
   return (
     <section className="Container-Other">
       <header className="judul-Other">
-        <h1>Familiar</h1>
+        <h1 className={`${darkModes ? "DarkFonts" : ""}`}>Familiar</h1>
       </header>
       <article className="Container-List-Other">
         <ul className="Other-Container">

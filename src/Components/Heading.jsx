@@ -3,31 +3,26 @@ import "../css/Heading.scss";
 import ImageMyFace from "../img/profil1.png";
 import ImageMyFace2 from "../img/profil2.png";
 import ImageMyFace3 from "../img/profil3.png";
-import MyCv from "../assets/Cv_Syahroni_English.pdf";
-function Heading() {
+import ButtonResume from "./ButtonResume";
+function Heading({ darkModes }) {
   return (
     <section className="Container-Heading">
       <div className="Container-wrap">
         <article className="Container-AboutMe">
-          <header>
+          <header className={`${darkModes ? "DarkFonts" : ""}`}>
             <h1>Hello,I’m Syahroni</h1>
             <h3>Front-end Developer</h3>
             <p>
-              I am a student with a keen interest in front-end development,
-              equipped with skills in various modern technologies and
-              frameworks. With my expertise, I have successfully developed
-              several web projects that demonstrate my creativity and
-              proficiency in designing attractive and responsive interfaces.
-              Additionally, I possess strong collaborative abilities and am
-              ready to work with dedication alongside a solid team, prepared to
-              take on new challenges in the technology industry.
+              I am interested in front-end development, complemented by skills
+              in various modern technologies and frameworks. With my skills, I
+              have successfully developed several web projects and proficiency
+              in designing attractive and responsive interfaces. In addition, I
+              have strong collaborative skills and am ready to work with a team
+              and new challenges in the technology industry.
             </p>
           </header>
-          <div className="LinkResume">
-            <a href={MyCv} download="Resume">
-              Resume
-            </a>
-          </div>
+
+          <ButtonResume />
         </article>
         <figure className="Container-Image">
           <img
@@ -38,7 +33,7 @@ function Heading() {
                 ? ImageMyFace2
                 : innerWidth >= 974 && ImageMyFace
             }
-            alt=""
+            alt="myFace"
           />
         </figure>
       </div>

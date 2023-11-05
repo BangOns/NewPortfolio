@@ -1,58 +1,83 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../css/Contact.scss";
 import "../css/Loaders.scss";
-
+import emailjs from "@emailjs/browser";
 import { Socmed } from "./getData";
-function Contact() {
+import { toast } from "react-toastify";
+function Contact({ darkModes }) {
   const dataSocmed = Socmed;
-  const [nama, setNama] = useState("");
+  const [from_name, setNama] = useState("");
+  const [from_email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
-  function handlerSubmit(e) {
+  const ref = useRef(null);
+  async function handlerSubmit(e) {
     e.preventDefault();
-    setTimeout(() => {
-      setLoading(true);
-    }, 100);
-    setNama("");
-    setMessage("");
-  }
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+    setLoading(true);
+    try {
+      const response = await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        ref.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      );
+      if (response.status === 200) {
+        toast.success("Send Message Success 😊", {
+          autoClose: 1000,
+        });
+      }
+      return response;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setEmail("");
+      setNama("");
+      setMessage("");
+      setLoading(false);
     }
-  }, [loading]);
+  }
+
   return (
     <section className="Container-Aside" id="kontak">
       <header className="Judul-Aside">
-        <h1>Contact</h1>
+        <h1 className={`${darkModes ? "DarkFonts" : ""}`}>Contact</h1>
       </header>
       <article className="Form-Aside">
-        <div className="Text-Aside">
+        <div className={`Text-Aside ${darkModes ? "DarkFonts" : ""}`}>
           <p>Send us a Message!</p>
           <p>
-            Hello, do you have a <strong>question</strong> for me?
+            Hello, do you have a{" "}
+            <strong className={`${darkModes ? "DarkFont" : ""}`}>
+              question
+            </strong>{" "}
+            for me?
           </p>
         </div>
-        <form onSubmit={handlerSubmit} className="Form">
+        <form ref={ref} onSubmit={handlerSubmit} className="Form">
           <div className="inputName">
             <input
               type="text"
-              placeholder="Name"
-              value={nama}
+              placeholder="name"
+              value={from_name}
+              name="from_name"
               required
               onChange={(e) => setNama(e.target.value)}
             />
           </div>
+          <div className="inputEmail">
+            <input
+              type="email"
+              placeholder="email"
+              value={from_email}
+              name="from_email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
           <div className="inputMessage">
             <textarea
-              name=""
-              id=""
-              cols="null"
-              rows="null"
               required
+              name="message"
               style={{ resize: "none" }}
               placeholder="Message"
               value={message}
@@ -61,15 +86,16 @@ function Contact() {
           </div>
           <div className="buttonSubmit">
             <button type="submit" disabled={!loading ? false : true}>
-              {!loading ? "Submit" : <span class="loader"></span>}
+              {!loading ? "Submit" : <span className="loader"></span>}
             </button>
           </div>
         </form>
       </article>
       <article className="Socmed-Aside">
-        <header className="Judul-Socmed">
+        <header className={`Judul-Socmed ${darkModes ? "DarkFonts" : ""}`}>
           <h1>
-            Let's <strong>Talk!</strong>
+            Let's{" "}
+            <strong className={`${darkModes ? "DarkFont" : ""}`}>Talk!</strong>
           </h1>
         </header>
         <div className="List-MySocmed">
@@ -79,7 +105,11 @@ function Contact() {
                 <li className="MySocmed" key={index}>
                   <a href={socmed.LinkWeb} target="_blank">
                     <figure className="Image-MySocmed">
-                      <img src={socmed.ImageWeb} alt="" />
+                      <img
+                        src={socmed.ImageWeb}
+                        alt=""
+                        className={`${darkModes ? "DarkIcon" : ""}`}
+                      />
                     </figure>
                   </a>
                 </li>

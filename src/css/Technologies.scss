@@ -39,6 +39,7 @@ $MyWarna2: (
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 .Teknologi {
   width: 210px;
@@ -66,6 +67,7 @@ $MyWarna2: (
     top: -55px;
   }
 }
+
 @media screen and (max-width: 900px) {
   .Container-List-Teknologi {
     padding-top: 10%;
@@ -104,6 +106,12 @@ $MyWarna2: (
       top: -30px;
     }
   }
+  .Teknologi:nth-child(6) {
+    .iconTech {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 @media screen and (max-width: 430px) {
   .Judul-Teknologi {
@@ -124,14 +132,20 @@ $MyWarna2: (
       }
       .iconTech {
         top: -17px;
-        width: 75px;
-        height: 75px;
+        width: 55px;
+        height: 55px;
       }
     }
   }
   .Teknologi:nth-child(5) {
     .iconTech {
       top: -25px;
+    }
+  }
+  .Teknologi:nth-child(6) {
+    .iconTech {
+      width: 40px;
+      height: 40px;
     }
   }
 }

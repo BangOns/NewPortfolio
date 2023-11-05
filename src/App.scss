@@ -1,0 +1,24 @@
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+
+.DarkBg {
+  background-color: map-get($MyWarna2, "warna-dasar4") !important;
+}
+.DarkFonts {
+  color: map-get($MyWarna, "warna-dasar") !important;
+}
+.DarkIcon {
+  filter: invert(55%) sepia(88%) saturate(2775%) hue-rotate(341deg)
+    brightness(96%) contrast(90%);
+}

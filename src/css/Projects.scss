@@ -68,6 +68,15 @@ $MyWarna2: (
     }
   }
 }
+
+@media screen and (min-width: 1600px) {
+  .Container {
+    &-Projects {
+      width: 100%;
+      padding-top: 3%;
+    }
+  }
+}
 @media screen and (max-width: 800px) {
   .Judul-Projects {
     h1 {

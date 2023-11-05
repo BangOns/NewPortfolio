@@ -2,12 +2,12 @@ import React from "react";
 import "../css/Technologies.scss";
 import Alas from "../img/alas.png";
 import { dataTekno } from "./getData";
-function Technologies() {
+function Technologies({ darkModes }) {
   const dataTechnologies = dataTekno;
   return (
     <section className="Container-Teknologi" id="teknologi">
       <header className="Judul-Teknologi">
-        <h1>Skills</h1>
+        <h1 className={`${darkModes ? "DarkFonts" : ""}`}>Skills</h1>
       </header>
       <article className="Container-List-Teknologi">
         <ul className="Teknologi-Container">

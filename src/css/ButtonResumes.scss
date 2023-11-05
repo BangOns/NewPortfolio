@@ -1,0 +1,118 @@
+$myFont: "MyFont";
+
+$MyWarna: (
+  "warna-dasar": #f2e3db,
+  "warna-dasar2": #41644a,
+  "warna-dasar3": #263a29,
+  "warna-dasar4": #e86a33,
+);
+
+$MyWarna2: (
+  "warna-dasar": #edf1d6,
+  "warna-dasar2": #9dc08b,
+  "warna-dasar3": #609966,
+  "warna-dasar4": #40513b,
+);
+.containerResumeButton {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buttonResume {
+  background-color: map-get($MyWarna, "warna-dasar4");
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  gap: 2px;
+  box-shadow: 0px 0px 3px 2px rgba(64, 81, 59, 0.3);
+  z-index: 1;
+}
+.IcondropDown {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  img {
+    transition: all 0.5s ease;
+  }
+}
+
+.down {
+  transform: rotate(180deg);
+}
+.Resume {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-family: $myFont;
+  padding-left: 2px;
+
+  color: map-get($map: $MyWarna, $key: "warna-dasar");
+}
+.dropDown {
+  width: 98%;
+  height: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: -1px;
+  padding: 3px 4px;
+  box-shadow: 0px 0px 3px 2px rgba(64, 81, 59, 0.3);
+  animation-name: ScrollUp;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  transform: translateY(-50px);
+}
+.ListResume {
+  li {
+    a {
+      display: block;
+      font-size: 16px;
+      width: 100%;
+      font-family: $myFont;
+      color: map-get($map: $MyWarna, $key: "warna-dasar3");
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: rgb(199, 199, 199);
+      border-radius: 3px;
+    }
+  }
+}
+.activeDown {
+  animation-name: ScrollDown;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("../Font/RobotoCondensed-Regular.ttf") format("truetype");
+}
+@media screen and (min-width: 1600px) {
+}
+@keyframes ScrollDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes ScrollUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  100% {
+    background-color: transparent;
+    opacity: 0;
+
+    transform: translateY(-50px);
+  }
+}

@@ -42,7 +42,7 @@ $MyWarna2: (
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 10px;
+  row-gap: 20px;
 }
 
 .Other {
@@ -93,6 +93,12 @@ $MyWarna2: (
       height: 70px;
     }
   }
+  .Other:nth-child(6) {
+    .iconOther {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -101,6 +107,12 @@ $MyWarna2: (
   }
   .Other-Container {
     width: 80%;
+  }
+  .Other:nth-child(6) {
+    .iconOther {
+      width: 70px;
+      height: 70px;
+    }
   }
 }
 
@@ -166,6 +178,12 @@ $MyWarna2: (
       top: -5px;
       width: 50px;
       height: 40px;
+    }
+  }
+  .Other:nth-child(6) {
+    .iconOther {
+      width: 50px;
+      height: 50px;
     }
   }
 }

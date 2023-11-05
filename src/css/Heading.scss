@@ -73,6 +73,30 @@ $MyWarna2: (
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .Container {
+    &-Heading {
+      padding-bottom: 0;
+    }
+  }
+  .Container {
+    &-wrap {
+      article {
+        p {
+          font-size: 20px;
+          width: 80%;
+        }
+      }
+      figure {
+        display: flex;
+        justify-content: end;
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 972px) {
   .Container {
     &-Heading {
@@ -119,6 +143,7 @@ $MyWarna2: (
   .Container {
     &-Heading {
       height: 550px;
+      margin-top: 3%;
     }
     &-wrap {
       flex-direction: column-reverse;
@@ -155,6 +180,7 @@ $MyWarna2: (
     &-Heading {
       width: 100%;
       height: 550px;
+      padding-bottom: 0;
     }
     &-wrap {
       article {
@@ -183,6 +209,7 @@ $MyWarna2: (
     &-Heading {
       width: 100%;
       height: 560px;
+      margin-top: 5%;
     }
     &-wrap {
       article {

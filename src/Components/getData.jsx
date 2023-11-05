@@ -4,12 +4,17 @@ import ImageKuis from "../img/project3.png";
 import ImageSort from "../img/project4.png";
 import ImageEcommerce from "../img/project5.png";
 import ImageFilm from "../img/project6.png";
+import MyPrecence from "../img/project7.png";
+import TextRandom from "../img/project8.png";
+import CodeonsLibrary from "../img/project9.png";
+
 //
 import HTML from "../img/html.png";
 import CSS from "../img/css.png";
 import JS from "../img/js.png";
 import REACT from "../img/react.png";
 import SASS from "../img/sass.png";
+import NEXT from "../img/next-js.svg";
 
 //
 import ReactQ from "../img/react-query.png";
@@ -17,6 +22,7 @@ import Git from "../img/git.png";
 import Redux from "../img/redux.png";
 import Postman from "../img/postman.png";
 import ReactR from "../img/react-router.png";
+import TAIL from "../img/tailwind.svg";
 
 //
 import Wa from "../img/whatsapp2.png";
@@ -68,15 +74,32 @@ export const dataProject = [
     linkGithub: "https://github.com/BangOns/searchFilm.github.io",
     imageWeb: ImageFilm,
   },
+  {
+    namaWeb: "MyPrecence",
+    TechStack: "Next Js, Tailwind Css",
+    linkWeb: "https://my-precence.vercel.app/",
+    linkGithub: "https://github.com/BangOns/MyPrecence.git",
+    imageWeb: MyPrecence,
+  },
+  {
+    namaWeb: "Text Random",
+    TechStack: "Next Js, Tailwind Css, JSONPlaceholder ",
+    linkWeb: "https://text-random.vercel.app/",
+    linkGithub: "https://github.com/BangOns/TextRandom.git",
+    imageWeb: TextRandom,
+  },
+  {
+    namaWeb: "Codeons Library",
+    TechStack: "HTML,CSS,JS",
+    linkWeb: "https://bangons.github.io/rakbuku.github.io/",
+    linkGithub: "https://github.com/BangOns/rakbuku.github.io.git",
+    imageWeb: CodeonsLibrary,
+  },
 ];
 
-export const dataTekno = [HTML, CSS, JS, REACT, SASS];
-export const dataOther = [ReactQ, Git, Redux, Postman, ReactR];
+export const dataTekno = [HTML, CSS, JS, REACT, SASS, NEXT];
+export const dataOther = [ReactQ, Git, Redux, Postman, ReactR, TAIL];
 export const Socmed = [
-  {
-    LinkWeb: "https://wa.link/ax08og",
-    ImageWeb: Wa,
-  },
   {
     LinkWeb: "https://instagram.com/syahroni18_?igshid=ZGUzMzM3NWJiOQ==",
     ImageWeb: Ig,
@@ -92,10 +115,6 @@ export const Socmed = [
 ];
 
 export const SocmedTop = [
-  {
-    LinkWeb: "https://wa.link/ax08og",
-    ImageWeb: Wa,
-  },
   { LinkWeb: "https://github.com/BangOns", ImageWeb: github },
   { LinkWeb: "https://www.linkedin.com/in/syahroni18/", ImageWeb: Linkedin },
 ];
