@@ -1,5 +1,5 @@
 import React from "react";
-import MyCv from "../assets/Cv_Syahroni_English.pdf";
+import MyCv from "../assets/Cv_Syahroni_MSIB.pdf";
 import portfolio from "../assets/Portfolio_Syahroni.pdf";
 
 export default function DropDown({ dropped }) {
